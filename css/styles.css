@@ -208,6 +208,17 @@ address {
    gap: 24px;
 }
 
+.skills-icon{
+   background-color: var(--cloud);
+   width: 100%;
+   margin-bottom: 8px;
+   border-radius: 4px;
+   height: 112px;
+   padding-top: 24px;
+   padding-bottom: 24px;
+}
+
+
 .skills-item {
    width: calc((100% - 72px) / 4);
 }
