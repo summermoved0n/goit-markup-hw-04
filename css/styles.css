@@ -161,6 +161,11 @@ address {
 
 .main-section {
   background-color: var(--navyblue);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-photo.jpg);
   padding: 188px 0;
 }
 
@@ -331,10 +336,6 @@ address {
   background-color: var(--iris);
 }
 
-.team-link-icon:focus .team-item-icon {
-  background-color: var(--ocean);
-}
-
 .team-item-icon:hover {
   background-color: var(--ocean);
 }
@@ -367,15 +368,26 @@ address {
 }
 
 .customers-item {
-  border-radius: 4px;
-  border: 1px solid #8e8f99;
   width: 168px;
   height: 88px;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customers-item:hover {
+  border-color: var(--ocean);
+}
+
+.customers-item:hover .customers-icon {
+  fill: var(--ocean);
 }
 
 .customers-icon {
-  position: absolute;
+  fill: #8e8f99;
 }
 
 /** ----------FOOTER----------- */
@@ -402,6 +414,32 @@ footer {
 
 .logo-footer {
   color: var(--cloud);
+}
+
+.footer-social-text{
+  color: var(--white, #FFF);
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.02em;
+margin-bottom: 16px;
+}
+
+.footer-item-icon {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 12px;
+  background-color: var(--iris);
+}
+
+.footer-item-icon:hover {
+  background-color: #31d0aa;
+}
+
+.footer-conteiner{
+  display: flex;
+  gap: 120px;
 }
 
 /**------ PORTFOLIO PAGE ----------**/
