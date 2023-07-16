@@ -540,7 +540,7 @@ footer {
   overflow: hidden;
 }
 
-.cover-conteiner:hover .portfolio-cover-text {
+.cover-conteiner:hover, :focus .portfolio-cover-text {
   transform: translateY(0);
 }
 
