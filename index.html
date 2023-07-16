@@ -60,7 +60,9 @@
         <div class="container">
           <h1 class="main-text">Effective Solutions for Your Business</h1>
 
-          <button class="order-button" type="button">Order Service</button>
+          <button class="order-button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -159,7 +161,7 @@
                 <ul class="list-team-icon list">
                   <li class="team-item-icon">
                     <a
-                      class="team-link-icon"
+                      class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -172,7 +174,7 @@
                   </li>
                   <li class="team-item-icon">
                     <a
-                      class="team-link-icon"
+                      class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -185,7 +187,7 @@
                   </li>
                   <li class="team-item-icon">
                     <a
-                      class="team-link-icon"
+                      class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -198,7 +200,7 @@
                   </li>
                   <li class="team-item-icon">
                     <a
-                      class="team-link-icon"
+                      class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -220,6 +222,7 @@
                 <ul class="list-team-icon list">
                   <li class="team-item-icon">
                     <a
+                      class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -232,6 +235,7 @@
                   </li>
                   <li class="team-item-icon">
                     <a
+                      class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -244,6 +248,7 @@
                   </li>
                   <li class="team-item-icon">
                     <a
+                      class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -256,6 +261,7 @@
                   </li>
                   <li class="team-item-icon">
                     <a
+                      class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -281,6 +287,7 @@
                 <ul class="list-team-icon list">
                   <li class="team-item-icon">
                     <a
+                    class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -293,6 +300,7 @@
                   </li>
                   <li class="team-item-icon">
                     <a
+                    class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -305,6 +313,7 @@
                   </li>
                   <li class="team-item-icon">
                     <a
+                    class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -317,6 +326,7 @@
                   </li>
                   <li class="team-item-icon">
                     <a
+                    class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -338,6 +348,7 @@
                 <ul class="list-team-icon list">
                   <li class="team-item-icon">
                     <a
+                    class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -350,6 +361,7 @@
                   </li>
                   <li class="team-item-icon">
                     <a
+                    class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -362,6 +374,7 @@
                   </li>
                   <li class="team-item-icon">
                     <a
+                    class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -374,6 +387,7 @@
                   </li>
                   <li class="team-item-icon">
                     <a
+                    class="team-item-link link"
                       href=""
                       aria-label="instagram"
                       target="_blank"
@@ -447,7 +461,7 @@
           <ul class="list-team-icon list">
             <li class="footer-item-icon">
               <a
-                class="team-link-icon"
+                class="footer-item-link"
                 href=""
                 aria-label="instagram"
                 target="_blank"
@@ -460,7 +474,7 @@
             </li>
             <li class="footer-item-icon">
               <a
-                class="team-link-icon"
+                class="footer-item-link"
                 href=""
                 aria-label="instagram"
                 target="_blank"
@@ -473,7 +487,7 @@
             </li>
             <li class="footer-item-icon">
               <a
-                class="team-link-icon"
+                class="footer-item-link"
                 href=""
                 aria-label="instagram"
                 target="_blank"
@@ -486,7 +500,7 @@
             </li>
             <li class="footer-item-icon">
               <a
-                class="team-link-icon"
+                class="footer-item-link"
                 href=""
                 aria-label="instagram"
                 target="_blank"
@@ -501,5 +515,16 @@
         </address>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-icon" width="24" height="24">
+            <use href="./images/1icons.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

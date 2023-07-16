@@ -6,6 +6,7 @@
   --ocean: #404bbf;
   --iris: #4d5ae5;
   --cornflower: #e7e9fc;
+  --dairy: #fcfcfc;
 }
 
 p,
@@ -121,6 +122,7 @@ body {
   letter-spacing: 0.02em;
   text-decoration: none;
   padding: 24px 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -138,6 +140,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:link {
@@ -216,6 +219,7 @@ address {
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-button:hover,
@@ -346,14 +350,22 @@ address {
 }
 
 .team-item-icon {
-  border-radius: 50%;
   height: 40px;
   width: 40px;
-  padding: 12px;
-  background-color: var(--iris);
 }
 
-.team-item-icon:hover {
+.team-item-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-item-link:is(:hover, :focus) {
   background-color: var(--ocean);
 }
 
@@ -393,6 +405,7 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-item:hover {
@@ -405,6 +418,7 @@ address {
 
 .customers-icon {
   fill: #8e8f99;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /** ----------FOOTER----------- */
@@ -443,14 +457,22 @@ footer {
 }
 
 .footer-item-icon {
-  border-radius: 50%;
   height: 40px;
   width: 40px;
-  padding: 12px;
-  background-color: var(--iris);
 }
 
-.footer-item-icon:hover {
+.footer-item-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-item-link:is(:hover, :focus) {
   background-color: #31d0aa;
 }
 
@@ -489,6 +511,7 @@ footer {
   border-radius: 4px;
   border: 1px solid var(--cornflower, #e7e9fc);
   background: var(--cloud, #f4f4fd);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons:hover,
@@ -506,6 +529,10 @@ footer {
 
 .portfolio-item {
   width: calc((100% - 48px) / 3);
+}
+
+.portfolio-item:hover .portfolio-container{
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .cover-conteiner {
@@ -538,6 +565,7 @@ footer {
   padding: 32px 16px;
   border: 1px solid var(--cornflower, #e7e9fc);
   border-top: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-portfolio {
@@ -554,4 +582,43 @@ footer {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+/**------ MODAL ----------**/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+  display: flex;
+  transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.modal {
+  width: 408px;
+  min-height: 554px;
+  border-radius: 4px;
+  background-color: var(--dairy);
+  margin: auto;
+  position: relative;
+}
+
+.modal-close-btn {
+  padding: 0;
+  border: none;
+  background: transparent;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
