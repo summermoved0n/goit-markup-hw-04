@@ -7,6 +7,7 @@
   --iris: #4d5ae5;
   --cornflower: #e7e9fc;
   --dairy: #fcfcfc;
+  --iconcolor: #8e8f99;
 }
 
 p,
@@ -157,6 +158,7 @@ address {
 
 .current {
   position: relative;
+  color: var(--ocean);
 }
 
 .current::after {
@@ -238,14 +240,14 @@ address {
   gap: 24px;
 }
 
-.skills-icon {
-  background-color: var(--cloud);
-  width: 100%;
-  margin-bottom: 8px;
-  border-radius: 4px;
+.container-skills-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 112px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 .skills-item {
@@ -404,25 +406,28 @@ address {
 .customers-item {
   width: 168px;
   height: 88px;
-  border-radius: 4px;
+}
+
+.customers-link {
+  width: 100%;
+  height: 100%;
   border: 1px solid #8e8f99;
-  position: relative;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--iconcolor);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customers-item:hover {
+.customers-link:is(:hover, :focus) {
   border-color: var(--ocean);
-}
-
-.customers-item:hover .customers-icon {
-  fill: var(--ocean);
+  color: var(--ocean);
 }
 
 .customers-icon {
-  fill: #8e8f99;
+  fill: currentColor;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -461,6 +466,11 @@ footer {
   margin-bottom: 16px;
 }
 
+.footer-list-icon {
+  display: flex;
+  gap: 16px;
+}
+
 .footer-item-icon {
   height: 40px;
   width: 40px;
@@ -474,7 +484,7 @@ footer {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-item-link:is(:hover, :focus) {
@@ -483,7 +493,11 @@ footer {
 
 .footer-conteiner {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
+}
+
+.footer-conteiner-logo {
+  margin-right: 120px;
 }
 
 /**------ PORTFOLIO PAGE ----------**/
@@ -512,11 +526,13 @@ footer {
   letter-spacing: 0.04em;
   cursor: pointer;
   padding: 12px 24px;
-
   border-radius: 4px;
   border: 1px solid var(--cornflower, #e7e9fc);
   background: var(--cloud, #f4f4fd);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons:hover,
@@ -524,6 +540,8 @@ footer {
   background-color: var(--ocean);
   color: var(--white, #fff);
   border: 1px solid transparent;
+  box-shadow: зі значенням 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-content {
@@ -536,10 +554,13 @@ footer {
   width: calc((100% - 48px) / 3);
 }
 
-.portfolio-item:hover .portfolio-container {
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+.portfolio-link {
+  display: block;
+}
+
+.portfolio-link:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .cover-conteiner {
@@ -562,11 +583,9 @@ footer {
   line-height: 1.5;
   letter-spacing: 0.02em;
   height: 100%;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 40px 32px;
   transform: translateY(100%);
-  transition: transform 250ms ease;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-container {
